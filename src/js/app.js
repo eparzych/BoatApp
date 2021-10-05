@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
+import Map from "./map.js"
+
 const App = () => {
     const [boats, setBoats] = useState([]);
 
@@ -14,6 +16,7 @@ const App = () => {
     <>
         <h1>Boats</h1>
         <pre>{JSON.stringify(boats, null, 4)}</pre>
+        <Map />
     </>
     )
 }
