@@ -11,7 +11,7 @@ const center = {
   lng: 18.667
 };
 
-function Map() {
+export const Map = () => {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: "AIzaSyD-c6xAbCuTYtp1tDVSa8tsQVTeHybRkGE"
@@ -41,5 +41,3 @@ function Map() {
     </GoogleMap>
   ) : null;
 }
-
-export default Map;
