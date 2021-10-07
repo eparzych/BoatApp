@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Boats.scss";
 
 export const Boats = () => {
     const [boats, setBoats] = useState([]);
@@ -10,9 +11,9 @@ export const Boats = () => {
         }, []);
     
     return (
-        <>
+        <div className="boats">
             <h1>Boats</h1>
             <pre>{JSON.stringify(boats, null, 4)}</pre>
-        </>
+        </div>
     )
 }

@@ -1,10 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import "./Map.scss";
 
-const containerStyle = {
-  width: '600px',
-  height: '400px'
-};
+
 
 const center = {
   lat: 54.35,
@@ -30,14 +28,13 @@ export const Map = () => {
   }, []);
 
   return isLoaded ? (
-    <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={center}
-      zoom={10}
-      onLoad={onLoad}
-      onUnmount={onUnmount}
-    >
-      { /* Child components, such as markers, info windows, etc. */ }
-    </GoogleMap>
+      <GoogleMap
+        mapContainerClassName="map"
+        center={center}
+        zoom={10}
+        onLoad={onLoad}
+        onUnmount={onUnmount}>
+        { /* Child components, such as markers, info windows, etc. */ }
+      </GoogleMap>
   ) : null;
 }

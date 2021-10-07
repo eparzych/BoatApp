@@ -1,10 +1,11 @@
 import React from "react";
+import "./Tools.scss";
 
 export const Tools = () => {
 
     return (
         <>
-            <p>Narzędzia do obsługi mapy</p>
+            <p className="tools">Narzędzia do obsługi mapy</p>
         </>
     )
 }

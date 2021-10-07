@@ -3,11 +3,12 @@ import {
     Link,
     NavLink,
   } from 'react-router-dom';
+import "./Nav.scss";
 
 export const Nav = () => {
 
     return (
-        <p>Nawigacja</p>
+        <p className="navigation">Nawigacja</p>
     )
 }
 
