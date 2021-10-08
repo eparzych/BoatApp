@@ -3,13 +3,17 @@ import {
     Link,
     NavLink,
   } from 'react-router-dom';
-import "./Nav.scss";
 
 export const Nav = () => {
 
     return (
-        <p className="navigation">Nawigacja</p>
+        <nav className="nav">
+            <a className="menu-items"><i className="fas fa-user-alt"></i></a>
+            <a className="menu-items">XYZ</a> 
+        </nav>
     )
 }
+
+
 
 

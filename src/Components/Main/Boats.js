@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./Boats.scss";
 
 export const Boats = () => {
     const [boats, setBoats] = useState([]);
@@ -17,3 +16,10 @@ export const Boats = () => {
         </div>
     )
 }
+
+    // const burger = document.querySelector('.burger');
+    // const menu = documnet.querySelector('nav ul');
+
+    // burger.addEventListener('click', function(e)){
+    //     menu.classList.toggle('mobile-menu');
+    // }

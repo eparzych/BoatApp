@@ -1,0 +1,7 @@
+.nav {
+    @include flexEnd;
+    grid-area: nav;
+    background-color: $color-nav;;
+    padding: 0 50px;
+    color: black;
+}
