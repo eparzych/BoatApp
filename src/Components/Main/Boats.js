@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-export const Boats = () => {
-    const [boats, setBoats] = useState([]);
-    
-    useEffect(() => {
-        fetch('/api/boats')
-        .then(response => response.json())
-        .then(data => setBoats(data));
-        }, []);
-    
+export const Boats = (props) => {
+    const { boats } = props;
+
     return (
         <div className="boats">
             <h1>Boats</h1>

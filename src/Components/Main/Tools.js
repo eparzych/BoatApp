@@ -1,5 +1,4 @@
 import React from "react";
-import "./Tools.scss";
 
 export const Tools = () => {
 

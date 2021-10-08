@@ -1,8 +1,5 @@
 import React, { useState, useCallback } from 'react';
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
-import "./Map.scss";
-
-
 
 const center = {
   lat: 54.35,
@@ -28,13 +25,14 @@ export const Map = () => {
   }, []);
 
   return isLoaded ? (
-      <GoogleMap
+    <GoogleMap
         mapContainerClassName="map"
         center={center}
         zoom={10}
         onLoad={onLoad}
         onUnmount={onUnmount}>
         { /* Child components, such as markers, info windows, etc. */ }
-      </GoogleMap>
+      <div className="toggle_component"></div>
+    </GoogleMap>
   ) : null;
 }
