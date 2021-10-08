@@ -15,7 +15,7 @@ export const Main = () => {
 
     return (
         <>
-            <Map />
+            <Map boats={boats} />
             <Tools />
             <Boats boats={boats} />
         </>
