@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Boat } from "./Boat";
 
 export const Boats = (props) => {
     const { boats } = props;
@@ -6,14 +7,14 @@ export const Boats = (props) => {
     return (
         <div className="boats">
             <h1>Boats</h1>
-            <pre>{JSON.stringify(boats, null, 4)}</pre>
+            <ul className="boatsList">
+                {boats.map(boat =>
+                    <Boat
+                        key={boat.id}
+                        boat={boat} />
+                )}
+            </ul>
+
         </div>
     )
 }
-
-    // const burger = document.querySelector('.burger');
-    // const menu = documnet.querySelector('nav ul');
-
-    // burger.addEventListener('click', function(e)){
-    //     menu.classList.toggle('mobile-menu');
-    // }

@@ -1,16 +1,10 @@
 import React from "react";
 
-export const Boat = () => {
-
+export const Boat = (props) => {
+    const {boat} = props;
     return (
-        <>
-            <p>Łódka nr xxxx do wyświetlania z API</p>
-            <p>Łódka nr xxxx do wyświetlania z API</p>
-            <p>Łódka nr xxxx do wyświetlania z API</p>
-            <p>Łódka nr xxxx do wyświetlania z API</p>
-            <p>Łódka nr xxxx do wyświetlania z API</p>
-            <p>Łódka nr xxxx do wyświetlania z API</p>
-            <p>Łódka nr xxxx do wyświetlania z API</p>
-        </>
+        <li>Łódka nr {boat.id} do wyświetlania z API</li>
+
+
     )
 }
