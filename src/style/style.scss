@@ -28,7 +28,6 @@
   
   body {
     font-family: $font-main;
-    font-size: 1.6rem;
   }
   
 
@@ -44,7 +43,7 @@
     justify-items: stretch;
     width: 100%;
     height: 100vh;
-    background-color: chartreuse;
+    background-color: $color-bg-boats;
     
     .boats { 
         display: none; 
@@ -68,6 +67,6 @@
         justify-items: stretch;
         width: 100%;
         height: 100vh;
-        background-color: chartreuse;
+        background-color: $color-bg-boats;
       }
     }

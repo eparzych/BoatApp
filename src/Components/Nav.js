@@ -8,7 +8,7 @@ export const Nav = () => {
 
     return (
         <nav className="nav">
-            <a className="menu-items"><i className="fas fa-user-alt"></i></a>
+            <a className="menu-items avatar"><i className="fas fa-user-alt"></i></a>
             <a className="menu-items">XYZ</a> 
         </nav>
     )

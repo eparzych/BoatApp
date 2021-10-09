@@ -30,12 +30,14 @@ export const Map = (props) => {
         mapContainerClassName="map"
         center={center}
         zoom={10}
+        options={{disableDefaultUI: true}}
         onLoad={onLoad}
         onUnmount={onUnmount}>
         { /* Child components, such as markers, info windows, etc. */ }
 
         {boats.map(boat =>
-                    <Marker position={{
+                    <Marker key={boat.id}
+                      position={{
                         lat: boat.latitude,
                         lng: boat.longitude
                       }}
