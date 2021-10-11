@@ -1,45 +1,48 @@
-.tools {
-    grid-area: tools;
-    display: flex;
-    background-color: $color-tools;
-    padding: 0.8rem 2.5rem 2rem;
-    border-radius: 0 0 10px 0;
-    box-shadow: inset 0 -0.6rem 2rem #333;
 
-    &__item {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex: 1 1 0;
-        border: 1px solid black;
-        // border: none;
-        // background-image: $color-gradient;
-        border-radius: 0.7rem;
-        box-shadow: 4px 4px 5px;
-        margin: 0 0.5rem;
-        padding: 18px 0;
-        transition: .3s;
-        cursor: pointer;
-
-        &:hover {
-            background-color: $color-btn;
-
-            .fas, .far {
-                transition: .2s;
-                transform: scale(1.2);
-                color: rgb(20, 20, 20);
-            }
-        }
-
-        &:active {
-            box-shadow: inset 0 2px 3px rgba(0,0,0,0.5);
-            background: $color-btn-active;
-        }
-
-        .fas, .far {
-            font-size: 2.2rem;
-        }
-    }
+@media (min-width: 577px) {
+  .tools {
+      grid-area: tools;
+      display: flex;
+      background-color: $color-tools;
+      padding: 0.8rem 2.5rem 2rem;
+      border-radius: 0 0 10px 0;
+      box-shadow: inset 0 -0.6rem 2rem #333;
+  
+      &__item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex: 1 1 0;
+          border: 1px solid black;
+          // border: none;
+          // background-image: $color-gradient;
+          border-radius: 0.7rem;
+          box-shadow: 4px 4px 5px;
+          margin: 0 0.5rem;
+          padding: 18px 0;
+          transition: .3s;
+          cursor: pointer;
+  
+          &:hover {
+              background-color: $color-btn;
+  
+              .fas, .far {
+                  transition: .2s;
+                  transform: scale(1.2);
+                  color: rgb(20, 20, 20);
+              }
+          }
+  
+          &:active {
+              box-shadow: inset 0 2px 3px rgba(0,0,0,0.5);
+              background: $color-btn-active;
+          }
+  
+          .fas, .far {
+              font-size: 2.2rem;
+          }
+      }
+  }
 }
 

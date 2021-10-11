@@ -13,6 +13,7 @@
 @import "components/Map.scss";
 @import "components/Nav.scss";
 @import "components/Tools.scss";
+@import "components/ToolsMobile.scss";
 
 
 
@@ -34,20 +35,19 @@
 @media (max-width: 576px) {
   .container {
     display: grid;
-    grid-template-columns: 1fr 0;
-    grid-template-rows: $height-nav-mobile 1fr $height-tools-mobile;
+    grid-template-columns: 1fr;
+    grid-template-rows: $height-nav-mobile 1fr;
     grid-template-areas: 
-      "nav nav "
-      "map boats"
-      "tools tools";
+      "nav"
+      "map";
     justify-items: stretch;
     width: 100%;
     height: 100vh;
-    background-color: $color-bg-boats;
+    background-color: $color-bg-boats2;
     
-    // .boats { 
-    //     display: none; 
-    //   }
+    .boats { 
+        display: none; 
+      }
     
     .toggle_component {
       display: inline-block;
@@ -67,6 +67,6 @@
         justify-items: stretch;
         width: 100%;
         height: 100vh;
-        background-color: $color-bg-boats;
+        background-color: $color-bg-boats2;
       }
     }

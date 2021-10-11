@@ -12,18 +12,19 @@ export const Boats = (props) => {
 
     return (
         <>
+        <div className="toggle_component" onClick={toggleComponent} />
         <div className={"boats" + (isOpen ? " open" : "")}>
-            <h1>Boats</h1>
             <ul className="boatsList">
-                {boats.map(boat =>
-                    <Boat
-                        key={boat.id}
-                        boat={boat} />
-                )}
+                <h1>Boats</h1>
+                    {boats.map(boat =>
+                        <Boat
+                            key={boat.id}
+                            boat={boat} />
+                    )}
             </ul>
-
         </div>
-        <div className="toggle_component" onClick={toggleComponent}></div>
-        </>
+    </>
     )
 }
+
+

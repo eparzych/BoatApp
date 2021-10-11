@@ -1,26 +1,31 @@
-.boats {
-    position: relative;
-    grid-area: boats;
-    background-color: $color-bg-boats2;
-    overflow-y: scroll;
-    color: white;
-}
 
-.toggle_component {
-    position: absolute;
-    top:50%;
-    right: 0;
-    transform: translate(0, -50%);
-    width: $width-toggle-component;
-    height: $height-toggle-component;
-    background-color: red;
-    display: none;
-}
+    .toggle_component {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        width: $width-toggle-component;
+        height: $height-toggle-component;
+        background-color: red;
+        display: none;
 
-.open {
-    width: 90vw;
-    right: 90vw;
-    transform: translate3d(0,0,0);
-	transition: transform 0.8s;
-	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-}
+    }
+    .boats {
+        grid-area: boats;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $color-bg-boats2;
+        overflow-y: scroll;
+        color: white;
+    }
+    
+    .open{
+        width: 90vh;
+        height: 100vh;
+        display: block;;
+        transform: translate(-340px, 0);
+    }
+
+
+    
