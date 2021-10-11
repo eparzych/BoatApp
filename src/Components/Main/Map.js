@@ -45,7 +45,7 @@ export const Map = (props) => {
                     />
                 )}
       
-      <div className="toggle_component"></div>
+
     </GoogleMap>
   ) : null;
 }

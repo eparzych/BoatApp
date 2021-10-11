@@ -4,8 +4,15 @@ import { Boat } from "./Boat";
 export const Boats = (props) => {
     const { boats } = props;
 
+    const [ isOpen, setOpen ] = useState(false);
+
+    const toggleComponent = () => {
+        setOpen(!isOpen);
+    }
+
     return (
-        <div className="boats">
+        <>
+        <div className={"boats" + (isOpen ? " open" : "")}>
             <h1>Boats</h1>
             <ul className="boatsList">
                 {boats.map(boat =>
@@ -16,5 +23,7 @@ export const Boats = (props) => {
             </ul>
 
         </div>
+        <div className="toggle_component" onClick={toggleComponent}></div>
+        </>
     )
 }
