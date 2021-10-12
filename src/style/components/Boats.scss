@@ -12,9 +12,6 @@
     }
     .boats {
         grid-area: boats;
-        position: fixed;
-        top: 0;
-        left: 0;
         background-color: $color-bg-boats2;
         overflow-y: scroll;
         color: white;

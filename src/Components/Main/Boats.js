@@ -14,8 +14,9 @@ export const Boats = (props) => {
         <>
         <div className="toggle_component" onClick={toggleComponent} />
         <div className={"boats" + (isOpen ? " open" : "")}>
+        <h1>Boats</h1>
             <ul className="boatsList">
-                <h1>Boats</h1>
+
                     {boats.map(boat =>
                         <Boat
                             key={boat.id}

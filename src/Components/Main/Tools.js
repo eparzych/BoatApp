@@ -4,13 +4,45 @@ export const Tools = () => {
 
     return (
     <>
-        <ul className="tools">
-            <li className="tools__item">Zaznacz obszar sprzątania <i className="fas fa-draw-polygon"></i></li>
-            <li className="tools__item">Dopłń do celu <i className="far fa-paper-plane"></i></li>
-            <li className="tools__item">Start<i className="far fa-play-circle"></i></li>
-            <li className="tools__item">Stop <i className="far fa-stop-circle"></i></li>
-            <li className="tools__item">Powrót do bazy <i className="fas fa-flag-checkered"></i></li>
-        </ul>
-</>
+    <div className="sidebar">
+        <ul className="nav-list">
+            <li>
+                <a href="#">
+                    <i className='fas fa-draw-polygon'></i>
+                    <span className="links_name">Zaznacz obszar sprzątania</span>
+                </a>
+                <span className="tooltip">Zaznacz obszar sprzątania</span>
+            </li>
+            <li>
+            <a href="#">
+                <i className='far fa-paper-plane' ></i>
+                <span className="links_name">Dopłyń do celu</span>
+            </a>
+            <span className="tooltip">Dopłyń do celu</span>
+            </li>
+            <li>
+            <a href="#">
+                <i className='far fa-play-circle' ></i>
+                <span className="links_name">Start</span>
+            </a>
+            <span className="tooltip">Start</span>
+            </li>
+            <li>
+            <a href="#">
+                <i className='far fa-stop-circle' ></i>
+                <span className="links_name">Stop</span>
+            </a>
+            <span className="tooltip">Stop</span>
+            </li>
+            <li>
+            <a href="#">
+                <i className='fas fa-flag-checkered' ></i>
+                <span className="links_name">Powrót do bazy</span>
+            </a>
+            <span className="tooltip">Powrót do bazy</span>
+            </li>
+            </ul>
+        </div>
+  </>
     )
 }
