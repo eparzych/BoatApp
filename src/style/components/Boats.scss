@@ -12,9 +12,31 @@
     }
     .boats {
         grid-area: boats;
+        padding: 20px;
         background-color: $color-bg-boats2;
-        overflow-y: scroll;
         color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+
+        .boatsTitle {
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 3rem;
+        }
+        
+        .boatsList {
+            width: 100%;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, .1);
+            border: none;
+            border-radius: 6px;
+            font-size: 1.9rem;
+            overflow-y: auto;
+            justify-content: center;
+        }
     }
     
     .open{
@@ -23,6 +45,23 @@
         display: block;;
         transform: translate(-340px, 0);
     }
-
-
+    
+    // SCROLLBAR
+    ::-webkit-scrollbar {
+        width: 9px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #000b22;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #4f6294;
+        border-radius: 10px;
+    
+        &:hover {
+            background: #ff7aa8;
+        }
+    
+    }
     

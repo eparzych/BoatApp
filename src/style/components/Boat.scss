@@ -1,0 +1,39 @@
+.accordion-box {
+    margin-bottom: 2rem;
+
+    .accordion-btn {
+        width: 100%;
+        padding: 1em;
+        color: #fff;
+        font-size: 1.8rem;
+        text-align: left;
+        border: none;
+        border-radius: 6px;
+        background-color: #565f64d0;
+        transition: background-color .3s;
+        cursor: pointer;  
+
+        &:hover,
+        &:focus {
+            background-color: #5f7e92;;
+
+        }
+
+        .fas {
+            margin-right: 2rem;
+            color: green;;
+        }
+    }
+
+    .accordion-info {
+        display: none;
+        padding: 1em 2em 0;
+
+        .accordion-info-text {
+            margin-bottom: 0.5em;
+        }
+    }
+}
+
+
+
