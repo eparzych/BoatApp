@@ -58,6 +58,7 @@
     ::-webkit-scrollbar-thumb {
         background: #4f6294;
         border-radius: 10px;
+        transition: 0.3s;
     
         &:hover {
             background: #ff7aa8;
