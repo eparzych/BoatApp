@@ -6,9 +6,12 @@ import {
     Switch,
   } from 'react-router-dom';
 import "./style/style.scss";
-import { Main } from "./Components/Main/Main.js";
-import { AdminBoats } from "./Components/Admin/AdminBoats.js";
 import { Nav } from "./Components/Nav.js";
+import { UserMain } from "./Components/Main/UserMain.js";
+import { Admin } from "./Components/Admin/Admin.js";
+import { AdminBoats } from "./Components/Admin/AdminBoats";
+import { AdminUsers } from "./Components/Admin/AdminUsers.js";
+
 
 const NotFound = () => {
     return <h1>404,Nothing is here</h1>;
@@ -20,8 +23,8 @@ const App = () => {
             <HashRouter>
                 <Nav />
                 <Switch>
-                    <Route exact path='/' component={Main} />
-                    <Route path='/admin' component={AdminBoats} />
+                    <Route exact path='/' component={UserMain} />
+                    <Route path='/admin' component={Admin} />
                     <Route component={NotFound} />
                 </Switch>
             </HashRouter>

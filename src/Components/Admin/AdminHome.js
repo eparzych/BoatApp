@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-export const AdminUsers = () => {
+export const AdminHome = () => {
 
     return (
-        <p>Welcome to admin users!</p>
+        <p>Welcome to admin home!</p>
     )
 }

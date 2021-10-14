@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Boat } from "./Boat";
 
+
 export const Boats = (props) => {
     const { boats } = props;
 

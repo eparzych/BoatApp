@@ -1,15 +1,15 @@
 
 .sidebar {
-  max-width: 72px;
+  max-width: 80px;
   background: #11101D;
   padding: 6px 14px;
 }
 
-.sidebar i{
+.sidebar i {
   color: #fff;
   height: 60px;
   min-width: 50px;
-  font-size: 28px;
+  font-size: 2.1rem;
   text-align: center;
   line-height: 60px;
 }
@@ -18,13 +18,13 @@
   padding-top: 20px;
 }
 
-.sidebar li{
+.sidebar li {
   position: relative;
   margin: 8px 0;
   list-style: none;
 }
 
-.sidebar li .tooltip{
+.sidebar li .tooltip {
   position: absolute;
   top: -20px;
   left: calc(100% + 15px);
@@ -41,7 +41,7 @@
   transition: 0s;
 }
 
-.sidebar li:hover .tooltip{
+.sidebar li:hover .tooltip {
   opacity: 1;
   pointer-events: auto;
   transition: all 0.4s ease;
@@ -49,7 +49,7 @@
   transform: translateY(-50%);
 }
     
-.sidebar li a{
+.sidebar li a {
   display: flex;
   height: 100%;
   width: 100%;
@@ -61,12 +61,12 @@
 }
 
 .sidebar li a:hover{
-  background: #FFF;
+  background: rgba(255, 255, 255, 0.616);
 }
 
 .sidebar li a .links_name{
   color: #fff;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 400;
   white-space: nowrap;
   opacity: 0;
@@ -74,18 +74,8 @@
   transition: 0.4s;
 }
 
-.sidebar.open li a .links_name{
-  opacity: 1;
-      pointer-events: auto;
-    }
-    .sidebar li a:hover .links_name,
-    .sidebar li a:hover i{
-      transition: all 0.5s ease;
+.sidebar li a:hover .links_name,
+    .sidebar li a:hover i {
+      transition: all 0.4s ease;
       color: #11101D;
-    }
-    .sidebar li i{
-      height: 50px;
-      line-height: 50px;
-      font-size: 18px;
-      border-radius: 12px;
     }

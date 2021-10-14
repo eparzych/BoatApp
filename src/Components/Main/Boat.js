@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 
+
 export const Boat = (props) => {
     const {boat} = props;
 

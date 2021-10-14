@@ -1,23 +1,8 @@
-// import React, { useState, useEffect } from "react";
-// import { Map } from "./Map.js";
-// import { Tools } from "./Tools.js";
-// import { Boats } from "./Boats.js";
+import React, { useState, useEffect } from "react";
 
-// export const AdminBoats = () => {
-//     const [boats, setBoats] = useState([]);
-    
-//     useEffect(() => {
-//         fetch('/api/boats')
-//         .then(response => response.json())
-//         .then(data => setBoats(data));
-//         }, []);
-    
+export const AdminBoats = () => {
 
-//     return (
-//         <>
-//             <Map boats={boats} />
-//             <Tools />
-//             <Boats boats={boats} />
-//         </>
-//     )
-// }
+    return (
+        <p>Welcome to admin boats!</p>
+    )
+}
