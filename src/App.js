@@ -9,8 +9,6 @@ import "./style/style.scss";
 import { Login } from "./Components/Login.js"
 import { Nav } from "./Components/Nav.js";
 import { UserMain } from "./Components/Main/UserMain.js";
-import { AdminNavigation } from "./Components/Admin/AdminNavigation.js";
-import { AdminHome } from "./Components/Admin/AdminHome.js";
 import { AdminBoats } from "./Components/Admin/AdminBoats";
 import { AdminUsers } from "./Components/Admin/AdminUsers.js";
 
@@ -33,9 +31,8 @@ const App = () => {
                 <Switch>
                     <Route exact path='/' component={UserMain} />
                     <Route path='/admin'>
-                        <AdminNavigation />
                         <Switch>
-                            <Route exact path='/admin' component={AdminHome} />
+                            <Route exact path='/admin' component={AdminBoats} />
                             <Route path='/admin/boats' component={AdminBoats} />
                             <Route path='/admin/users' component={AdminUsers} />
                             <Route component={NotFound} />

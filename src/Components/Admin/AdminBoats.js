@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { AdminNavigation } from "./AdminNavigation.js"
 import { AdminBoat } from "./AdminBoat";
 
 
@@ -14,7 +15,8 @@ export const AdminBoats = (props) => {
     
 
     return (
-    <>
+    <div className="wrapper__admin">
+        <AdminNavigation />
         <h1 className="boatsTitle">Boats</h1>
         <ul className="boatsList">
                 {boats.map(boat =>
@@ -23,6 +25,6 @@ export const AdminBoats = (props) => {
                         boat={boat} />
                 )}
         </ul>
-    </>
+    </div>
     )
 }

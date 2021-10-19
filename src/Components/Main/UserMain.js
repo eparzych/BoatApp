@@ -14,10 +14,10 @@ export const UserMain = () => {
     
 
     return (
-        <>
+        <div className="wrapper__user">
             <Map boats={boats} />
             <Tools />
             <Boats boats={boats} />
-        </>
+        </div>
     )
 }
