@@ -1,35 +1,37 @@
 @media (max-width: 576px) {
-    .wrapper__user {
-      grid-area: main;
-      display: grid;
-      grid-template-columns: .15fr  1fr;
-      grid-template-areas: 
-        "tools map";
-      justify-items: stretch;
-      width: 100%;
-      height: 100%;
-      background-color: $color-bg-boats2;
-      
-      .boats { 
-          display: none; 
-        }
-      
-      .toggle_component {
-        display: inline-block;
-      }
+  .wrapper__user {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: .15fr  1fr;
+    grid-template-areas: 
+      "tools map";
+    justify-items: stretch;
+    width: 100%;
+    height: 100%;
+    background-color: $color-bg-boats2;
+    overflow: hidden;
+    
+    .boats { 
+        display: none; 
+    }
+    
+    .toggle_component {
+      display: inline-block;
     }
   }
+}
   
-      @media (min-width: 577px) {
-        .wrapper__user {
-            grid-area: main;
-          display: grid;
-          grid-template-columns: 0.2fr 7fr 3fr;
-          grid-template-areas: 
-            "tools map boats";
-          justify-items: stretch;
-          width: 100%;
-          height: 100%;
-          background-color: $color-bg-boats2;
-        }
-      }
+@media (min-width: 577px) {
+  .wrapper__user {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 0.2fr 7fr 3fr;
+    grid-template-areas: 
+      "tools map boats";
+    justify-items: stretch;
+    width: 100%;
+    height: 100%;
+    background-color: $color-bg-boats2;
+    overflow: hidden;
+  }
+}

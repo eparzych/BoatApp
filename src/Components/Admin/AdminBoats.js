@@ -17,7 +17,7 @@ export const AdminBoats = (props) => {
     return (
     <div className="wrapper__admin">
         <AdminNavigation />
-        <div className="admin__boats">
+        <div className="admin__main">
             <h1 className="boatsTitle">Boats</h1>
             <ul className="boatsList">
                     {boats.map(boat =>

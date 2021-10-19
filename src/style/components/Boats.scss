@@ -1,68 +1,66 @@
 
-    .toggle_component {
-        position: fixed;
-        top: 50%;
-        right: 0;
-        transform: translate(0, -50%);
-        width: $width-toggle-component;
-        height: $height-toggle-component;
-        background-color: red;
-        display: none;
+.toggle_component {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: $width-toggle-component;
+    height: $height-toggle-component;
+    background-color: red;
+    display: none;
+}
 
-    }
-    .boats {
-        grid-area: boats;
-        padding: 20px;
-        background-color: $color-bg-boats2;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        overflow: hidden;
+.boats {
+    grid-area: boats;
+    padding: 20px;
+    background-color: $color-bg-boats2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 
-        .boatsTitle {
-            padding-bottom: 20px;
-            text-transform: uppercase;
-            font-weight: 600;
-            font-size: 3rem;
-        }
-        
-        .boatsList {
-            width: 100%;
-            padding: 15px;
-            background-color: rgba(255, 255, 255, .1);
-            border: none;
-            border-radius: 6px;
-            font-size: 1.9rem;
-            overflow-y: auto;
-            justify-content: center;
-        }
+    .boatsTitle {
+        padding-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 3rem;
     }
-    
-    .open{
-        width: 90vh;
-        height: 100vh;
-        display: block;;
-        transform: translate(-340px, 0);
+
+    .boatsList {
+        width: 100%;
+        padding: 15px;
+        background-color: rgba(255, 255, 255, .1);
+        border: none;
+        border-radius: 6px;
+        font-size: 1.9rem;
+        overflow-y: auto;
+        justify-content: center;
     }
-    
-    // SCROLLBAR
-    ::-webkit-scrollbar {
-        width: 9px;
+}
+
+.open{
+    width: 90vh;
+    height: 100vh;
+    display: block;;
+    transform: translate(-340px, 0);
+}
+
+// SCROLLBAR
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000b22;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4f6294;
+    border-radius: 10px;
+    transition: 0.3s;
+
+    &:hover {
+        background: rgb(122, 255, 167);
     }
-    
-    ::-webkit-scrollbar-track {
-        background: #000b22;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-        background: #4f6294;
-        border-radius: 10px;
-        transition: 0.3s;
-    
-        &:hover {
-            background: #ff7aa8;
-        }
-    
-    }
-    
+}
