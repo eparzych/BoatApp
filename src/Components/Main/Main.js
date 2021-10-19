@@ -3,7 +3,7 @@ import { Map } from "./Map.js";
 import { Tools } from "./Tools.js";
 import { Boats } from "./Boats.js";
 
-export const UserMain = () => {
+export const Main = () => {
     const [boats, setBoats] = useState([]);
     
     useEffect(() => {

@@ -8,7 +8,7 @@ import {
 import "./style/style.scss";
 import { Login } from "./Components/Login.js"
 import { Nav } from "./Components/Nav.js";
-import { UserMain } from "./Components/Main/UserMain.js";
+import { Main } from "./Components/Main/Main.js";
 import { AdminBoats } from "./Components/Admin/AdminBoats";
 import { AdminUsers } from "./Components/Admin/AdminUsers.js";
 
@@ -21,15 +21,15 @@ const App = () => {
     const [userName, setUserName] = useState();
 
 
-    if (!userName) {
-        return <Login setUserName={setUserName} />
-    }
+    // if (!userName) {
+    //     return <Login setUserName={setUserName} />
+    // }
 
     return (
             <HashRouter>
                 <Nav userName={userName} />
                 <Switch>
-                    <Route exact path='/' component={UserMain} />
+                    <Route exact path='/' component={Main} />
                     <Route path='/admin'>
                         <Switch>
                             <Route exact path='/admin' component={AdminBoats} />

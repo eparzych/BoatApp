@@ -6,7 +6,9 @@ export const AdminUsers = () => {
     return (
         <div className="wrapper__admin">
             <AdminNavigation />
-        <p>Welcome to admin users!</p>
+            <div className="admin__users">
+                <p>lista użytkowników</p>
+            </div>
         </div>
     )
 }

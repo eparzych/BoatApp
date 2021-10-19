@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AdminNavigation } from "./AdminNavigation.js"
-import { AdminBoat } from "./AdminBoat";
+import { AdminBoat } from "./AdminBoat.js";
 
 
 export const AdminBoats = (props) => {
@@ -17,14 +17,16 @@ export const AdminBoats = (props) => {
     return (
     <div className="wrapper__admin">
         <AdminNavigation />
-        <h1 className="boatsTitle">Boats</h1>
-        <ul className="boatsList">
-                {boats.map(boat =>
-                    <AdminBoat
-                        key={boat.id}
-                        boat={boat} />
-                )}
-        </ul>
+        <div className="admin__boats">
+            <h1 className="boatsTitle">Boats</h1>
+            <ul className="boatsList">
+                    {boats.map(boat =>
+                        <AdminBoat
+                            key={boat.id}
+                            boat={boat} />
+                    )}
+            </ul>
+        </div>
     </div>
     )
 }

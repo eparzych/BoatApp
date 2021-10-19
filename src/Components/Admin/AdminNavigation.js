@@ -1,15 +1,19 @@
 import React from "react";
 import {
-    Link,
     NavLink,
   } from 'react-router-dom';
 
 export const AdminNavigation = () => {
     return (
-    <nav className="nav__admin">
-        <NavLink to = "/admin" activeClassName = "active__nav__elem" className = "nav__elem">Home</NavLink>
-        <NavLink to = "/admin/boats" activeClassName = "active__nav__elem" className = "nav__elem">Lista łódek</NavLink>
-        <NavLink to = "/admin/users" activeClassName = "active__nav__elem" className = "nav__elem">Użytkownicy</NavLink>
-    </nav>
+    <div className="admin__nav">
+        <NavLink to = "/admin/boats" activeClassName = "active__admin__elem" className = "admin__nav__elem">
+            <i class="fas fa-ship"></i>
+            <p>Lista łódek</p>
+        </NavLink>
+        <NavLink to = "/admin/users" activeClassName = "active__admin__elem" className = "admin__nav__elem">
+            <i class="fas fa-user-friends"></i>
+            <p>Użytkownicy</p>
+        </NavLink>
+    </div>
     )
 }
