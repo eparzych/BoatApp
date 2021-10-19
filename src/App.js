@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import ReactDOM from "react-dom";
 import {
     HashRouter,
@@ -6,9 +6,11 @@ import {
     Switch,
   } from 'react-router-dom';
 import "./style/style.scss";
+import { Login } from "./Components/Login.js"
 import { Nav } from "./Components/Nav.js";
 import { UserMain } from "./Components/Main/UserMain.js";
-import { Admin } from "./Components/Admin/Admin.js";
+import { AdminNavigation } from "./Components/Admin/AdminNavigation.js";
+import { AdminHome } from "./Components/Admin/AdminHome.js";
 import { AdminBoats } from "./Components/Admin/AdminBoats";
 import { AdminUsers } from "./Components/Admin/AdminUsers.js";
 
@@ -18,16 +20,31 @@ const NotFound = () => {
 }
 
 const App = () => {
+    const [userName, setUserName] = useState();
+
+
+    if (!userName) {
+        return <Login setUserName={setUserName} />
+    }
 
     return (
             <HashRouter>
-                <Nav />
+                <Nav userName={userName} />
                 <Switch>
                     <Route exact path='/' component={UserMain} />
-                    <Route path='/admin' component={Admin} />
+                    <Route path='/admin'>
+                        <AdminNavigation />
+                        <Switch>
+                            <Route exact path='/admin' component={AdminHome} />
+                            <Route path='/admin/boats' component={AdminBoats} />
+                            <Route path='/admin/users' component={AdminUsers} />
+                            <Route component={NotFound} />
+                        </Switch>
+                    </Route>
                     <Route component={NotFound} />
                 </Switch>
             </HashRouter>
     )
 }
+
 ReactDOM.render(<App/>, document.getElementById("app"));

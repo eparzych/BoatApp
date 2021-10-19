@@ -12,7 +12,7 @@ export const Boat = (props) => {
 
     return (
         <li className="accordion-box">
-            <div clasName="checkbox">
+            <div className="checkbox">
                 <input type="checkbox" />
             </div>
             <div className="accordion-item" onClick={openAccordionItems}>

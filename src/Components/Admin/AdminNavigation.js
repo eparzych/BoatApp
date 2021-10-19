@@ -9,8 +9,8 @@ export const AdminNavigation = () => {
     <nav className="nav">
         <div className="navbar-nav">
             <NavLink to = "/admin" activeClassName = "active__nav__elem" className = "nav__elem">Home</NavLink>
-            <NavLink to = "/adminboats" activeClassName = "active__nav__elem" className = "nav__elem"> Lista łódek</NavLink>
-            <NavLink to = "/adminusers" activeClassName = "active__nav__elem" className = "nav__elem">Użytkownicy</NavLink>
+            <NavLink to = "/admin/boats" activeClassName = "active__nav__elem" className = "nav__elem"> Lista łódek</NavLink>
+            <NavLink to = "/admin/users" activeClassName = "active__nav__elem" className = "nav__elem">Użytkownicy</NavLink>
         </div>
     </nav>
     )
