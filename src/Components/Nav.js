@@ -1,19 +1,27 @@
 import React from "react";
 import {
-    Link,
-    NavLink,
+    Link
   } from 'react-router-dom';
 
 export const Nav = (props) => {
     const {userName} = props;
 
     return (
-        <nav className="nav">
-            <a className="menu-items avatar"><i className="fas fa-user-alt"></i></a>
-            <a className="menu-items">{userName}</a> 
-        </nav>
+        <ul className="nav">
+            <li className="list-item">
+                <p className="user__name">
+                    <i className="fas fa-user-alt avatar"></i>
+                    <span>{userName}stefan</span>
+                </p>
+                <ul className="drop-menu menu-2">
+                    <Link to="/" className="drop-item"><p className="item">Zmień hasło</p></Link>
+                    <Link to="/" className="drop-item"><p className="item last">Wyloguj</p></Link>
+                </ul>
+            </li>
+        </ul>
     )
 }
+
 
 
 

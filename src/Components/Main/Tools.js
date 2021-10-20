@@ -3,7 +3,6 @@ import React from "react";
 export const Tools = () => {
 
     return (
-    <>
     <div className="sidebar">
         <ul className="nav-list">
             <li>
@@ -43,6 +42,5 @@ export const Tools = () => {
             </li>
             </ul>
         </div>
-  </>
     )
 }

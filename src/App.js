@@ -21,9 +21,9 @@ const App = () => {
     const [userName, setUserName] = useState();
 
 
-    if (!userName) {
-        return <Login setUserName={setUserName} />
-    }
+    // if (!userName) {
+    //     return <Login setUserName={setUserName} />
+    // }
 
     return (
             <HashRouter>

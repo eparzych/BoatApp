@@ -13,7 +13,7 @@
 .boats {
     grid-area: boats;
     padding: 20px;
-    background-color: $color-bg-boats2;
+    background-color: $color-bg;
     color: white;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@
     .boatsList {
         width: 100%;
         padding: 15px;
-        background-color: rgba(255, 255, 255, .1);
+        background-color: $color-boats-list;
         border: none;
         border-radius: 6px;
         font-size: 1.9rem;
@@ -56,11 +56,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #4f6294;
+    background: $color-scroll;
     border-radius: 10px;
     transition: 0.3s;
-
-    &:hover {
-        background: rgb(122, 255, 167);
-    }
 }

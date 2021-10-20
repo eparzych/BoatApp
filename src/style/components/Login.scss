@@ -140,21 +140,21 @@
 .form {
     grid-area: form;
     background-color: rgb(255, 255, 255);
-    padding: 45px 30px;
+    padding: 50px 30px;
     display: flex;
     flex-direction: column;
     font-size: 1.5rem;
 
     &__title {
-        font-size: 4.7rem;
+        font-size: 5rem;
         font-weight: 700;
         text-transform: uppercase;
         color: rgb(73, 145, 169);
     }
 
     &__subtitle {
-        padding: 3px 0 90px 10px;
-        font-size: 2.5rem;
+        padding: 3px 0 100px 10px;
+        font-size: 2.7rem;
         font-weight: 700;
         color: rgb(73, 145, 169);
     }

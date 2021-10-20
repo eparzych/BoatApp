@@ -6,7 +6,10 @@ export const AdminBoat = (props) => {
 
     return (
         <li className="admin__list__item">
-            Łódka nr {boat.id}
+            <p>Łódka nr {boat.id}</p>
+            <button className="btn__delete">
+                <i class="fas fa-trash-alt"></i>Usuń
+            </button>
         </li>
     )
 }
