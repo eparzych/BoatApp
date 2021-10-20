@@ -8,6 +8,7 @@
       width: 100%;
       height: 100%;
       background-color: $color-bg-boats2;
+      overflow: hidden;
     }
   }
   
@@ -21,14 +22,16 @@
     width: 100%;
     height: 100%;
     background-color: $color-bg-boats2;
+    overflow: hidden;
   }
 }
 
 .admin__main {
   grid-area: admin__main;
-  margin: 30px;
-  padding: 10px;
+  margin: 20px;
+  padding: 25px;
   margin-left: 0;
   background-color: rgba(189, 189, 189, 0.363);
   border-radius: 10px;
+  overflow: hidden;
 }

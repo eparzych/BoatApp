@@ -18,8 +18,8 @@ export const AdminBoats = (props) => {
     <div className="wrapper__admin">
         <AdminNavigation />
         <div className="admin__main">
-            <h1 className="boatsTitle">Boats</h1>
-            <ul className="boatsList">
+            <h1 className="admin__title">Lista łódek</h1>
+            <ul className="admin__list">
                     {boats.map(boat =>
                         <AdminBoat
                             key={boat.id}

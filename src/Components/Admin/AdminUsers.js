@@ -7,7 +7,10 @@ export const AdminUsers = () => {
         <div className="wrapper__admin">
             <AdminNavigation />
             <div className="admin__main">
-                <p>lista użytkowników</p>
+                <h1 className="admin__title">Lista użytkowników</h1>
+                <ul className="admin__list">
+                    <p className="admin__list__item">lista użytkowników</p>
+                </ul>
             </div>
         </div>
     )
