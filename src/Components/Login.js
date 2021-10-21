@@ -23,7 +23,7 @@ export const Login = (props) => {
     return (
         <div className="login">
             <div className="logo">
-                <div class="logo__icon">
+                <div className="logo__icon">
                     <i></i>
                     <span></span>
                 </div>
@@ -32,11 +32,11 @@ export const Login = (props) => {
                 <h1 className="form__title">Welcome</h1>
                 <p className="form__subtitle">to our website</p>
                 <p className="form__text">Log in</p>
-                <label for="">
+                <label>
                     User name
                     <input className="user__name" type="text" name="userName" value={form.userName} onChange={handleChange}/>
                 </label>
-                <label for="">
+                <label>
                     Password
                     <input className="password" type="password" name="password" value={form.password} onChange={handleChange}/>
                 </label>

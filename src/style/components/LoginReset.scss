@@ -1,0 +1,33 @@
+@media (max-width: 576px) {
+    .form {
+        padding: 25px 20px;
+        .reset {
+            font-size: 2.9rem;
+            text-transform: uppercase;
+            padding-bottom: 1.4em;
+        }
+    
+        .password__reset {
+            padding: .7em;
+            margin: .35em 0 .95em;
+        }
+    
+        .btn__reset {
+                margin-top: .8em;
+        }
+    }
+}
+
+@media (min-width: 577px) {
+    .form {
+        .reset {
+            padding-bottom: 1.4em ;
+        }
+
+        .password__reset {
+            padding: 1em;
+            margin: .35em 0 2em;
+        }
+    }
+}
+

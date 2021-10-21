@@ -7,6 +7,7 @@ import {
   } from 'react-router-dom';
 import "./style/style.scss";
 import { Login } from "./Components/Login.js"
+// import { Login} from "./Components/LoginReset.js"
 import { Nav } from "./Components/Nav.js";
 import { Main } from "./Components/Main/Main.js";
 import { AdminBoats } from "./Components/Admin/AdminBoats";
@@ -21,9 +22,9 @@ const App = () => {
     const [userName, setUserName] = useState();
 
 
-    // if (!userName) {
-    //     return <Login setUserName={setUserName} />
-    // }
+    if (!userName) {
+        return <Login setUserName={setUserName} />
+    }
 
     return (
             <HashRouter>
