@@ -2,9 +2,11 @@ import React, {useState} from "react";
 
 
 export const Boat = (props) => {
-    const {boat} = props;
+    const {boat, toggleCheckbox} = props;
 
     const [ isActive, setActive] = useState(false);
+
+      
 
     function openAccordionItems () {
         setActive(!isActive);
@@ -13,7 +15,9 @@ export const Boat = (props) => {
     return (
         <li className="accordion-box">
             <div className="checkbox">
-                <input type="checkbox" />
+                <input type="checkbox" 
+                    key={boat.id}
+                    onChange={(e) => toggleCheckbox(boat.id)} />
             </div>
             <div className="accordion-item" onClick={openAccordionItems}>
                 <button className="accordion-btn">

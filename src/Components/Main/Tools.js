@@ -1,46 +1,40 @@
 import React from "react";
 
-export const Tools = () => {
+export const Tools = (props) => {
+    const { activeTool, setActiveTool } = props;
+
+    const onClick = (e) => {
+        setActiveTool(e.currentTarget.id);
+    }
+
+    const isActive = (id) => {
+        return activeTool == id;
+    }
 
     return (
     <div className="sidebar">
         <ul className="nav-list">
-            <li>
-                <a href="#">
-                    <i className='fas fa-draw-polygon'></i>
-                    <span className="links_name">Zaznacz obszar sprzątania</span>
-                </a>
+            <li id="clean-area" className={isActive("clean-area") ? "activeTool" : ""} onClick={onClick}>
+                <i className='fas fa-draw-polygon'></i>
                 <span className="tooltip">Zaznacz obszar sprzątania</span>
             </li>
-            <li>
-            <a href="#">
+            <li id="run" className={isActive("run") ? "activeTool" : ""} onClick={onClick}>
                 <i className='far fa-paper-plane' ></i>
-                <span className="links_name">Dopłyń do celu</span>
-            </a>
-            <span className="tooltip">Dopłyń do celu</span>
+                <span className="tooltip">Dopłyń do celu</span>
             </li>
-            <li>
-            <a href="#">
+            <li id="start" className={isActive("start") ? "activeTool" : ""} onClick={onClick}>
                 <i className='far fa-play-circle' ></i>
-                <span className="links_name">Start</span>
-            </a>
-            <span className="tooltip">Start</span>
+                <span className="tooltip">Start</span>
             </li>
-            <li>
-            <a href="#">
+            <li id="stop" className={isActive("stop") ? "activeTool" : ""} onClick={onClick}>
                 <i className='far fa-stop-circle' ></i>
-                <span className="links_name">Stop</span>
-            </a>
-            <span className="tooltip">Stop</span>
+                <span className="tooltip">Stop</span>
             </li>
-            <li>
-            <a href="#">
+            <li id="return" className={isActive("return") ? "activeTool" : ""} onClick={onClick}>
                 <i className='fas fa-flag-checkered' ></i>
-                <span className="links_name">Powrót do bazy</span>
-            </a>
-            <span className="tooltip">Powrót do bazy</span>
+                <span className="tooltip">Powrót do bazy</span>
             </li>
-            </ul>
-        </div>
+        </ul>
+    </div>
     )
 }

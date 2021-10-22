@@ -17,9 +17,27 @@
 .sidebar li {
   position: relative;
   margin: 8px 0;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+
+  &:hover{
+    background: rgba(255, 255, 255, 0.1);
+
+    & .tooltip {
+      opacity: 1;
+      transition: all 0.4s ease;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
 }
 
-.sidebar li .tooltip {
+.tooltip {
   position: absolute;
   top: -20px;
   left: calc(100% + 15px);
@@ -35,32 +53,7 @@
   transition: 0s;
 }
 
-.sidebar li:hover .tooltip {
-  opacity: 1;
-  transition: all 0.4s ease;
-  top: 50%;
-  transform: translateY(-50%);
-}
-    
-.sidebar li a {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  border-radius: 12px;
-  align-items: center;
-  text-decoration: none;
-  transition: all 0.4s ease;
-}
 
-.sidebar li a:hover{
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.sidebar li a .links_name{
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 400;
-  white-space: nowrap;
-  opacity: 0;
-  transition: 0.4s;
+.activeTool {
+  background-color: $color-boat;
 }

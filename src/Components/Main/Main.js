@@ -5,6 +5,7 @@ import { Boats } from "./Boats.js";
 
 export const Main = () => {
     const [boats, setBoats] = useState([]);
+    const [activeTool, setActiveTool] = useState("");
     
     useEffect(() => {
         fetch('/api/boats')
@@ -16,7 +17,7 @@ export const Main = () => {
     return (
         <div className="wrapper__user">
             <Map boats={boats} />
-            <Tools />
+            <Tools activeTool={activeTool} setActiveTool={setActiveTool} />
             <Boats boats={boats} />
         </div>
     )

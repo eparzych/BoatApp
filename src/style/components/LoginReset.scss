@@ -1,4 +1,7 @@
 @media (max-width: 576px) {
+    .login {
+        height: 100%;
+    }
     .form {
         padding: 25px 20px;
         .reset {
@@ -19,15 +22,18 @@
 }
 
 @media (min-width: 577px) {
-    .form {
-        .reset {
-            padding-bottom: 1.4em ;
-        }
+    .login {
+            height: calc( 100vh - $height-nav-desktop);
+        .form {
+            .reset {
+                padding-bottom: 1.4em ;
+            }
 
-        .password__reset {
-            padding: 1em;
-            margin: .35em 0 2em;
+            .password__reset {
+                padding: 1em;
+                margin: .35em 0 2em;
+            }
         }
     }
-}
+}   
 

@@ -7,7 +7,7 @@ import {
   } from 'react-router-dom';
 import "./style/style.scss";
 import { Login } from "./Components/Login.js"
-// import { Login} from "./Components/LoginReset.js"
+import { LoginReset } from "./Components/LoginReset.js"
 import { Nav } from "./Components/Nav.js";
 import { Main } from "./Components/Main/Main.js";
 import { AdminBoats } from "./Components/Admin/AdminBoats";
@@ -19,8 +19,11 @@ const NotFound = () => {
 }
 
 const App = () => {
-    const [userName, setUserName] = useState();
+    const [userName, setUserName] = useState("test");
 
+    const logout = () => {
+        setUserName("");
+    }
 
     if (!userName) {
         return <Login setUserName={setUserName} />
@@ -28,9 +31,12 @@ const App = () => {
 
     return (
             <HashRouter>
-                <Nav userName={userName} />
+                <Nav userName={userName} logout={logout}  />
                 <Switch>
                     <Route exact path='/' component={Main} />
+                    <Route path='/reset'>
+                        <LoginReset logout={logout}/>
+                    </Route>
                     <Route path='/admin'>
                         <Switch>
                             <Route exact path='/admin' component={AdminBoats} />

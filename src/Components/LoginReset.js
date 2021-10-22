@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
-export const Login = (props) => {
-    const {setUserName} = props; 
+export const LoginReset = (props) => {
+    const { logout } = props; 
     
     const [form, setForm] = useState({ userName: "", oldPassword:"", newPassword: "", repetPassword: ""});
     
@@ -17,7 +17,7 @@ export const Login = (props) => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        setUserName(form.userName);
+        logout();
     }
     
     return (
@@ -46,7 +46,7 @@ export const Login = (props) => {
                     Repet New Password
                     <input className="password password__reset" type="password" name="repetPassword" value={form.repetPassword} onChange={handleChange}/>
                 </label>
-                <div className="btn btn__reset" onClick={onSubmit}><button className="btn__login">Zaloguj</button></div>
+                <div className="btn btn__reset" onClick={onSubmit}><button className="btn__login">Resetuj</button></div>
             </form>
         </div>
   );

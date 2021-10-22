@@ -5,7 +5,21 @@ import { Boat } from "./Boat";
 export const Boats = (props) => {
     const { boats } = props;
 
+    const [ checkedBoats, setCheckedBoats ] = useState(new Set());
     const [ isOpen, setOpen ] = useState(false);
+
+    const toggleCheckbox = (boatId) => {
+        setCheckedBoats(prevChecked => {
+            const newChecked = new Set(prevChecked);
+            if (newChecked.has(boatId)) {
+                newChecked.delete(boatId);
+            } else {
+                newChecked.add(boatId);
+            }
+            return newChecked;
+        });
+    } 
+console.log(checkedBoats);
 
     const toggleComponent = () => {
         setOpen(!isOpen);
@@ -21,7 +35,8 @@ export const Boats = (props) => {
                     {boats.map(boat =>
                         <Boat
                             key={boat.id}
-                            boat={boat} />
+                            boat={boat} 
+                            toggleCheckbox={toggleCheckbox}/>
                     )}
             </ul>
         </div>
