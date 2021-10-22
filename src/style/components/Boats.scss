@@ -40,10 +40,13 @@
 }
 
 .open {
-    width: 90vh;
-    height: 100vh;
-    display: block;;
-    transform: translate(-340px, 0);
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 70vw;
+    padding: 20px;
+    z-index: 1000;
+
 }
 
 // SCROLLBAR
