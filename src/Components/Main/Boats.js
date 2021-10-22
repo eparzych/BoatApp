@@ -21,15 +21,16 @@ export const Boats = (props) => {
     } 
 console.log(checkedBoats);
 
-    const toggleComponent = () => {
-        setOpen(!isOpen);
-    }
-
     return (
         <>
-        <div className="toggle_component" onClick={toggleComponent} />
+        <div className="sidebar__open" onClick={() => setOpen(true)}>
+            <i class="fas fa-chevron-left"></i>
+        </div>
         <div className={"boats" + (isOpen ? " open" : "")}>
-            <h1 className="boatsTitle">Boats</h1>
+            <div className="boatsTitle">
+                <i className="far fa-times-circle escape" onClick={() => setOpen(false)}></i>
+                <span className="title">Boats</span>
+            </div>
             <ul className="boatsList">
 
                     {boats.map(boat =>

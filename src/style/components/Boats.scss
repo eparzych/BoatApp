@@ -1,18 +1,27 @@
 
-.toggle_component {
+.sidebar__open {
     position: fixed;
     top: 50%;
     right: 0;
-    transform: translate(0, -50%);
-    width: $width-toggle-component;
-    height: $height-toggle-component;
-    background-color: red;
+    transform: translate(50%, -50%);
+    width: $width-sidebar-open;
+    height: $height-sidebar-open;
+    background: $color-nav2;
+    border-radius: 50%;
     display: none;
+
+    .fa-chevron-left {
+        font-size: 3.2rem;
+        padding-left: 9px;
+        line-height: $height-sidebar-open;
+        color: white;
+        font-weight: bold;
+    }
 }
 
 .boats {
     grid-area: boats;
-    padding: 20px;
+    padding: 20px 20px 0;
     background-color: $color-bg;
     color: white;
     display: flex;
@@ -21,15 +30,29 @@
     overflow: hidden;
 
     .boatsTitle {
+        @include between;
+        position: relative;
+        width: 100%;
         padding-bottom: 20px;
         text-transform: uppercase;
         font-weight: 600;
         font-size: 3rem;
+
+        .escape {
+            position: absolute;
+            transition: .3s;
+        }
+
+        .title {
+            margin-left: 50%;
+            transform: translate(-50%, 0);
+        }
     }
 
     .boatsList {
         width: 100%;
         padding: 15px;
+        margin-bottom: 20px;
         background-color: $color-boats-list;
         border: none;
         border-radius: 6px;
@@ -41,7 +64,7 @@
 
 .open {
     transform: translate(-100%, 0);
-    z-index: 10;
+    z-index: 2;
 }
 
 // SCROLLBAR

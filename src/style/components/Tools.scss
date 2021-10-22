@@ -1,7 +1,7 @@
 
 .sidebar {
   max-width: $width-tools;
-  background: $color-bg;
+  background: $color-tools;
   padding: 25px 5px;
 }
 
@@ -41,7 +41,7 @@
   position: absolute;
   top: -20px;
   left: calc(100% + 15px);
-  z-index: 3;
+  z-index: 2;
   background: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   padding: 6px 12px;
