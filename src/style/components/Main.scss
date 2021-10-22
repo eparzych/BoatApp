@@ -12,7 +12,11 @@
     overflow: hidden;
     
     .boats { 
-        padding: 0;
+      position: fixed;
+      left: 100vw;
+      height: 100%;
+      width: $width-boats-mobile;
+      transition: all 1s ease;
     }
     
     .toggle_component {
