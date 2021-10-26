@@ -23,7 +23,7 @@ export const AdminUsers = () => {
                     {users.map(user =>
                         <AdminUser
                             key={user.id}
-                            boat={user} />
+                            user={user} />
                     )}
             </ul>
         </div>
