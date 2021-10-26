@@ -28,14 +28,14 @@ export const Login = (props) => {
                 "Content-Type": "application/json"
             }
         })
-        // .then(response => response.json())
-        // .then(form => {
-        //     // setUserName(form.username);
-        //     console.log(form);
-        // })
-        // .catch(error => {
-        //   console.log(error);
-        // });
+        .then(response => response.json())
+        .then(form => {
+            // setUserName(form.username);
+            console.log(form);
+        })
+        .catch(error => {
+          console.log(error);
+        });
     }
   
     return (
@@ -58,7 +58,7 @@ export const Login = (props) => {
                     Password
                     <input className="password" type="password" name="password" value={form.password} onChange={handleChange}/>
                 </label>
-                <div className="btn" onClick={onSubmit}><button className="btn__login">Zaloguj</button></div>
+                <div className="btn__login" onClick={onSubmit}><button className="btn btn__submit">Zaloguj</button></div>
             </form>
         </div>
   );
