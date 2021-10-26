@@ -1,14 +1,15 @@
 @import "reset.scss";
 
+
 @import "settings/colors";
 @import "settings/component_height";
 @import "settings/fonts";
 @import "settings/mixins";
+@import "settings/btn";
 
 @import "components/Admin.scss";
 @import "components/AdminNavigation.scss";
 @import "components/AdminBoats.scss";
-@import "components/AdminUsers.scss";
 @import "components/Boat.scss";
 @import "components/Boats.scss";
 @import "components/Login.scss";

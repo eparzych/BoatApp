@@ -3,7 +3,7 @@ import React, {useState} from "react";
 export const Login = (props) => {
     const {setUserName} = props; 
     
-    const [form, setForm] = useState({ userName: "", password:""});
+    const [form, setForm] = useState({ username: "", password:""});
     
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -18,26 +18,26 @@ export const Login = (props) => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        setUserName(form.userName);
 
         // const dataForm = form.map(input => input.toLowerCase());
-
-        console.log(form);
         
-        fetch("api/login", {
-            method: "POST",
+        fetch('/api/login', {
+            method: 'POST',
             body: JSON.stringify(form),            
             headers: {
                 "Content-Type": "application/json"
             }
         })
-
-
+        // .then(response => response.json())
+        // .then(form => {
+        //     // setUserName(form.username);
+        //     console.log(form);
+        // })
+        // .catch(error => {
+        //   console.log(error);
+        // });
     }
-
   
-
-    
     return (
         <div className="login">
             <div className="logo">
@@ -52,7 +52,7 @@ export const Login = (props) => {
                 <p className="form__text">Log in</p>
                 <label>
                     User name
-                    <input className="user__name" type="text" name="userName" value={form.userName} onChange={handleChange}/>
+                    <input className="user__name" type="text" name="username" value={form.username} onChange={handleChange}/>
                 </label>
                 <label>
                     Password

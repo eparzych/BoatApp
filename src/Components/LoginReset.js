@@ -23,7 +23,7 @@ export const LoginReset = (props) => {
     return (
         <div className="login">
             <div className="logo">
-                <div class="logo__icon">
+                <div className="logo__icon">
                     <i></i>
                     <span></span>
                 </div>

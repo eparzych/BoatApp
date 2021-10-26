@@ -12,7 +12,6 @@ export const Main = () => {
         .then(response => response.json())
         .then(data => setBoats(data));
         }, []);
-    
 
     return (
         <div className="wrapper__user">

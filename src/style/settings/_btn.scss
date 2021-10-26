@@ -1,0 +1,45 @@
+.btn {
+    background-color: rgb(73, 145, 169);  
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: .5rem;
+
+    &__login {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        padding: 1.5rem 3rem;  
+        width: 50%;
+    }
+}
+
+.btn__delete,
+.btn__reset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 1.4rem;
+    flex-wrap: wrap;
+    width: 140px;
+    height: 55px;
+
+
+    .fas, 
+    .far {
+        font-size: 2rem;
+    }
+
+}
+
+.btns {
+    display: flex;
+
+    .btn__delete {
+        margin-right: 10px;
+    }
+}
+
