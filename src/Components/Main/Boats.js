@@ -24,7 +24,7 @@ console.log(checkedBoats);
     return (
         <>
         <div className="sidebar__open" onClick={() => setOpen(true)}>
-            <i class="fas fa-chevron-left"></i>
+            <i className="fas fa-chevron-left"></i>
         </div>
         <div className={"boats" + (isOpen ? " open" : "")}>
             <div className="boatsTitle">

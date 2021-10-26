@@ -15,10 +15,28 @@ export const Login = (props) => {
         });
     };
 
+
     const onSubmit = (e) => {
         e.preventDefault();
         setUserName(form.userName);
+
+        // const dataForm = form.map(input => input.toLowerCase());
+
+        console.log(form);
+        
+        fetch("api/login", {
+            method: "POST",
+            body: JSON.stringify(form),            
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+
+
     }
+
+  
+
     
     return (
         <div className="login">
