@@ -28,10 +28,11 @@ export const Login = (props) => {
                 "Content-Type": "application/json"
             }
         })
-        .then(response => response.json())
-        .then(form => {
-            // setUserName(form.username);
-            console.log(form);
+
+        .then(response => {
+            if (response.ok) {
+                setUserName(form.username);
+            }
         })
         .catch(error => {
           console.log(error);
