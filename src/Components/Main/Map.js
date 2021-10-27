@@ -44,7 +44,7 @@ export const Map = (props) => {
                       }}
                       icon={{
                         url: '/img/boat.svg',
-                        anchor: new google.maps.Point(17, 46),
+                        anchor: new google.maps.Point(boat.latitude, boat.longitude),
                         scaledSize: new google.maps.Size(100, 100)
                     }}
                       label={String(boat.id)} />
