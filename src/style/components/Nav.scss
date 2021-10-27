@@ -25,6 +25,7 @@
             perspective: 1000px;
             
             .drop-item {
+                opacity: 0;
                 transform-origin: top center;
                 transition: background-color .5s;
 

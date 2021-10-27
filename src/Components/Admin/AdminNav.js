@@ -41,6 +41,18 @@ export const AdminNav = (props) => {
     )
 }
 
+// <li class="list-item">
+//     <a href="#" class="kabobs item--js">
+//       <span>KaBoBs</span>
+//       <img src="https://res.cloudinary.com/elafreet/image/upload/v1530189897/cooking1.svg" alt="">
+//     </a>
+//     <ul class="drop-menu menu-2">
+//       <li class="drop-item"><a href="#" class="item--1">Shish Kabobs</a></li>
+//       <li class="drop-item"><a href="#" class="item--2">BBQ Kabobs</a></li>
+//       <li class="drop-item"><a href="#" class="item--3">Summer Kabobs</a></li>
+//     </ul>
+//   </li>
+
 
 
 
