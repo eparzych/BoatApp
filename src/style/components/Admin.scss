@@ -1,29 +1,15 @@
-@media (max-width: 576px) {
-    .wrapper__admin {
-      display: grid;
-      grid-template-rows: 2fr 9fr;
-      grid-template-areas: 
-        "admin__nav admin__main";
-      justify-items: stretch;
-      width: 100%;
-      height: 100%;
-      background-color: $color-bg;
-      overflow: hidden;
-    }
-  }
-  
-@media (min-width: 577px) {
-  .wrapper__admin {
-    display: grid;
-    grid-template-columns: 2fr 8fr;
-    grid-template-areas: 
-      "admin__nav admin__main";
-    justify-items: stretch;
-    width: 100%;
-    height: 100%;
-    background-color: $color-bg;
-    overflow: hidden;
-  }
+.container__admin {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: $height-nav-desktop 1fr;
+  grid-template-areas: 
+    "admin__nav"
+    "admin__content";
+  justify-items: stretch;
+  width: 100%;
+  height: 100vh;
+  background-color: $color-bg;
+  overflow: hidden;
 }
 
 .admin__main {
@@ -35,3 +21,34 @@
   border-radius: 10px;
   overflow: hidden;
 }
+
+@media (max-width: 576px) {
+  .wrapper__admin {
+    grid-area: admin__content;
+    display: grid;
+    grid-template-rows: 2fr 9fr;
+    grid-template-areas: 
+      "admin__tools admin__main";
+    justify-items: stretch;
+    width: 100%;
+    height: 100%;
+    background-color: $color-bg;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 577px) {
+  .wrapper__admin {
+    grid-area: admin__content;
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    grid-template-areas: 
+      "admin__tools admin__main";
+    justify-items: stretch;
+    width: 100%;
+    height: 100%;
+    background-color: $color-bg;
+    overflow: hidden;
+  }
+}
+

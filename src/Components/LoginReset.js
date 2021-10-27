@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Nav } from './Nav.js';
 
 export const LoginReset = (props) => {
     const { logout } = props; 
@@ -21,7 +22,9 @@ export const LoginReset = (props) => {
     }
     
     return (
-        <div className="login">
+    <div className="container">
+        <Nav />
+        <div className="login login__reset">
             <div className="logo">
                 <div className="logo__icon">
                     <i></i>
@@ -49,5 +52,6 @@ export const LoginReset = (props) => {
                 <div className="btn btn__reset" onClick={onSubmit}><button className="btn btn__submit">Resetuj</button></div>
             </form>
         </div>
+    </div>
   );
 }

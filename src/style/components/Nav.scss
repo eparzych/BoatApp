@@ -1,31 +1,26 @@
-.nav {
+.nav,
+.admin__nav {
     @include flexEnd;
     grid-area: nav;
-    padding: 0 3.1rem;
+    padding: 0 3rem;
     background-color: $color-nav2;
     // background-color: rgba(173, 173, 173, 0.157);
     font-size: 2rem;
     z-index: 3;
-}
 
-.list-item {
-    width: 170px;
-    height: 100%;
-
-    .user__name {
-        display: flex;
-        flex-direction: row;
-        .avatar {
-            padding-right: 20px;
-            font-size: 2.5rem;
+    .list-item {
+        width: 170px;
+        height: 100%;
+    
+        .user__name {
+            display: flex;
+            flex-direction: row;
+            .avatar {
+                padding-right: 20px;
+                font-size: 2.5rem;
+            }
         }
-    }
-
-    &:hover {
-        .drop-item {
-            display: block;
-        }
-
+        
         .menu-2 {
             perspective: 1000px;
             
@@ -44,46 +39,60 @@
                     }
                 }
             }
+            .last {
+                border-radius: 0 0 15px 15px;
+            }   
         }
-    }
-
-
-    .last {
-        border-radius: 0 0 15px 15px;
-    }
-
-    p {
-        @include center;
-        flex-direction: column;
-        height: 100%;
-        color: #fff;
-    }
-
-    .drop-item {
-        display: none;
-        .item {
-            height: 70px;
-            // background: rgba(45, 51, 54, 0.95);
-            background-color: $color-nav2;
-            opacity: .95;
-            font-size: .8em;
-
-            &:hover {
-                cursor: pointer;
-                background-color: #1c2227;
-                transition: background-color .4s;
+    
+        p {
+            @include center;
+            flex-direction: column;
+            height: 100%;
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+    
+        .drop-item {
+            display: none;
+            .item {
+                height: 70px;
+                // background: rgba(45, 51, 54, 0.95);
+                background-color: $color-nav2;
+                opacity: .95;
+                font-size: .8em;
+    
+                &:hover {
+                    cursor: pointer;
+                    background-color: #1c2227;
+                    transition: background-color .4s;
+                }
             }
         }
     }
+
+    .list__open {
+        .drop-item {
+            display: block;
+        }
+    }
+
+
+    
+    @keyframes topToBottom {
+      0% {
+        opacity: 0;
+        transform: rotateX(-90deg);
+      }
+      100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+      }
+    } 
 }
 
-@keyframes topToBottom {
-  0% {
-    opacity: 0;
-    transform: rotateX(-90deg);
-  }
-  100% {
-    opacity: 1;
-    transform: rotateX(0deg);
-  }
+.admin__nav {
+    grid-area: admin__nav;
 }

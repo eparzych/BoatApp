@@ -18,8 +18,6 @@ export const Login = (props) => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-
-        // const dataForm = form.map(input => input.toLowerCase());
         
         fetch('/api/login', {
             method: 'POST',

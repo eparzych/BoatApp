@@ -8,7 +8,6 @@ import {
 import "./style/style.scss";
 import { Login } from "./Components/Login.js"
 import { LoginReset } from "./Components/LoginReset.js"
-import { Nav } from "./Components/Nav.js";
 import { Main } from "./Components/Main/Main.js";
 import { AdminBoats } from "./Components/Admin/AdminBoats";
 import { AdminUsers } from "./Components/Admin/AdminUsers.js";
@@ -31,17 +30,15 @@ const App = () => {
 
     return (
             <HashRouter>
-                <Nav userName={userName} logout={logout}  />
                 <Switch>
-                    <Route exact path='/' component={Main} />
-                    <Route path='/reset'>
-                        <LoginReset logout={logout}/>
-                    </Route>
-                    <Route path='/admin'>
+                    <Route exact path='/'><Main userName={userName} logout={logout} /></Route>
+                    <Route path='/reset'><LoginReset logout={logout}/></Route>
+                    <Route path='/admin' component={AdminBoats}>
                         <Switch>
-                            <Route exact path='/admin' component={AdminBoats} />
-                            <Route path='/admin/boats' component={AdminBoats} />
-                            <Route path='/admin/users' component={AdminUsers} />
+                            <Route exact path='/admin'>
+                                <AdminBoats userName={userName} logout={logout}/></Route>
+                            <Route path='/admin/users'>
+                                <AdminUsers userName={userName} logout={logout}/></Route>
                             <Route component={NotFound} />
                         </Switch>
                     </Route>
