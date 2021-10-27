@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
-
 const center = {
   lat: 54.35,
   lng: 18.667
@@ -42,10 +41,9 @@ export const Map = (props) => {
                         lat: boat.latitude,
                         lng: boat.longitude
                       }}
-                      label={String(boat.id)}
-                    />
+                      icon={{ url: '../assets/boat.svg'}}
+                      label={String(boat.id)} />
                 )}
-      
 
     </GoogleMap>
   ) : null;
