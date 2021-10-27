@@ -25,6 +25,7 @@ export const Map = (props) => {
     setMap(null);
   }, []);
 
+
   return isLoaded ? (
     <GoogleMap
         mapContainerClassName="map"
@@ -41,7 +42,11 @@ export const Map = (props) => {
                         lat: boat.latitude,
                         lng: boat.longitude
                       }}
-                      icon={{ url: '../assets/boat.svg'}}
+                      icon={{
+                        url: '/img/boat.svg',
+                        anchor: new google.maps.Point(17, 46),
+                        scaledSize: new google.maps.Size(100, 100)
+                    }}
                       label={String(boat.id)} />
                 )}
 
