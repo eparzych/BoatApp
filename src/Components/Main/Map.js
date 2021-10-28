@@ -25,6 +25,7 @@ export const Map = (props) => {
     setMap(null);
   }, []);
 
+  const colorHex = `#ac${Math.floor(Math.random()*10)}`;
 
   return isLoaded ? (
     <GoogleMap
@@ -43,11 +44,21 @@ export const Map = (props) => {
                         lng: boat.longitude
                       }}
                       icon={{
-                        url: '/img/boat.svg',
-                        anchor: new google.maps.Point(50, 50),
-                        scaledSize: new google.maps.Size(100, 100)
-                    }}
-                      label={String(boat.id)} />
+                        path: "m -8.6069802,-699.67406 v 11.71992 C -235.72968,-388.21521 -327.18206,75.569598 -173.52643,697.7293 l 349.85233,1.8208 C 255.37494,382.8444 244.54877,244.93098 249.5522,75.527008 239.93581,-288.86154 140.11123,-513.84155 7.1898498,-687.67358 l -0.01,-12.32606 v 0 0",
+                        scale: 0.06,
+                        strokeWeight: 4,
+                        strokeColor: "#454545",
+                        fillColor: colorHex,
+                        fillOpacity: 1,
+                        rotation: boat.latitude,
+                        // anchor: new google.maps.Point(50, 50),
+                        // scaledSize: new google.maps.Size(100, 100)
+                      }}
+                        label= {{text: String(boat.id),
+                          color: "#DDD",
+                          fontSize: "2.9rem",
+                          fontWeight: "bold",
+                      }} />
                 )}
 
     </GoogleMap>
