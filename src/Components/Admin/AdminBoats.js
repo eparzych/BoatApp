@@ -8,13 +8,28 @@ export const AdminBoats = (props) => {
     const {userName, logout} = props;
     const [boats, setBoats] = useState([]);
     
-    useEffect(() => {
+    const getBoats = () => {
         fetch('/api/boats')
         .then(response => response.json())
         .then(data => setBoats(data));
-        }, []);
-    
+    }
 
+    useEffect(getBoats, []);
+
+    const buttonDelete = (id) => {
+
+        fetch('/api/boats/' + id, {
+            method: "DELETE"
+        })
+            .then(response => {
+                getBoats();
+                console.log(response.ok);
+            })
+            .catch(error => {
+            console.log(error);
+            });
+    };
+    
     return (
     <div className="container__admin">
         <AdminNav userName={userName} logout={logout} />
@@ -26,7 +41,8 @@ export const AdminBoats = (props) => {
                         {boats.map(boat =>
                             <AdminBoat
                                 key={boat.id}
-                                boat={boat} />
+                                boat={boat}
+                                onDelete={buttonDelete} />
                         )}
                 </ul>
             </div>

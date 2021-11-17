@@ -46,10 +46,10 @@ export const LoginReset = (props) => {
                     <input className="password password__reset" type="password" name="newPassword" value={form.newPassword} onChange={handleChange}/>
                 </label>
                 <label>
-                    Repet New Password
+                    Repeat New Password
                     <input className="password password__reset" type="password" name="repetPassword" value={form.repetPassword} onChange={handleChange}/>
                 </label>
-                <div className="btn btn__reset" onClick={onSubmit}><button className="btn btn__submit">Resetuj</button></div>
+                <div className="btn btn__reset" onClick={onSubmit}><button className="btn btn__submit">Reset</button></div>
             </form>
         </div>
     </div>

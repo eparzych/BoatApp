@@ -21,11 +21,11 @@ export const AdminUsers = (props) => {
             <div className="admin__main">
                 <h1 className="admin__title">Lista użytkowników</h1>
                 <ul className="admin__list">
-                        {/* {users.map(user =>
+                        {users.map(user =>
                             <AdminUser
                                 key={user.id}
                                 user={user} />
-                        )} */}
+                        )}
                 </ul>
             </div>
         </div>

@@ -57,7 +57,7 @@ export const Login = (props) => {
                     Password
                     <input className="password" type="password" name="password" value={form.password} onChange={handleChange}/>
                 </label>
-                <div className="btn__login" onClick={onSubmit}><button className="btn btn__submit">Zaloguj</button></div>
+                <div className="btn__login" onClick={onSubmit}><button className="btn btn__submit">Log In</button></div>
             </form>
         </div>
   );

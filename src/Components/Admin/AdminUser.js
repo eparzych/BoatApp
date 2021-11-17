@@ -6,7 +6,7 @@ export const AdminUser = (props) => {
 
     return (
         <li className="admin__list__item user">
-            <p className="userName">Użytkownik {user}</p>
+            <p className="userName">Użytkownik {user.username}</p>
             <div className="btns">
             <button className="btn btn__delete">
                 <i className="fas fa-user-times"></i>

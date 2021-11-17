@@ -19,7 +19,6 @@ export const Boats = (props) => {
             return newChecked;
         });
     } 
-console.log(checkedBoats);
 
     return (
         <>

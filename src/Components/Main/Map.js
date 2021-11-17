@@ -25,7 +25,18 @@ export const Map = (props) => {
     setMap(null);
   }, []);
 
-  const colorHex = `#ac${Math.floor(Math.random()*10)}`;
+  function randomColor(ID) {
+    let boatColor;
+    let randomNumber = Math.random();
+    if (0.3 > randomNumber ) {
+      return boatColor = `#fb${ID}`
+    }
+    if (0.3 <= randomNumber &&  randomNumber < 0.6) {
+      return boatColor = `#95${ID}`
+    } else {
+      return boatColor = `#9a${ID}`
+    }
+  }
 
   return isLoaded ? (
     <GoogleMap
@@ -37,7 +48,7 @@ export const Map = (props) => {
         onUnmount={onUnmount}>
         { /* Child components, such as markers, info windows, etc. */ }
 
-        {boats.map(boat =>
+        {boats.map(boat => 
                     <Marker key={boat.id}
                       position={{
                         lat: boat.latitude,
@@ -48,7 +59,7 @@ export const Map = (props) => {
                         scale: 0.06,
                         strokeWeight: 4,
                         strokeColor: "#454545",
-                        fillColor: colorHex,
+                        fillColor: randomColor(boat.id), 
                         fillOpacity: 1,
                         rotation: boat.latitude,
                         // anchor: new google.maps.Point(50, 50),
@@ -56,7 +67,7 @@ export const Map = (props) => {
                       }}
                         label= {{text: String(boat.id),
                           color: "#DDD",
-                          fontSize: "2.9rem",
+                          fontSize: "2.7rem",
                           fontWeight: "bold",
                       }} />
                 )}
