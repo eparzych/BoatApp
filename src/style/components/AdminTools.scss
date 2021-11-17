@@ -1,0 +1,39 @@
+.admin__tools {
+    grid-area: admin__tools;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: transparent;
+
+    &__elem {
+        align-self: center;
+        width: 75%;
+        height: 30%;
+        padding: 20% 2%;
+        background-color: rgba(189, 189, 189, 0.363);
+        color: rgb(47, 47, 47);
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.6rem;
+        // letter-spacing: 1px;
+        text-align: center;
+        border: 2px solid white;
+        border-radius: 3px;
+        transition: .3s;
+
+        .fas {
+            font-size: 4.2rem;
+            padding-bottom: 15px;
+        }
+        
+        &:hover {
+            background-color: rgba(189, 189, 189, 0.6);
+        }
+    }
+}
+
+.active__admin__elem {
+    background-color: rgba(151, 154, 168, 0.6);
+}

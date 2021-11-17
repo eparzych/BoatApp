@@ -1,0 +1,76 @@
+.accordion-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+
+    .accordion-item{
+        width: calc(100% - 15px);
+        margin-left: 15px;
+    }
+
+    .accordion-btn {
+        padding: 0.8em 1em;
+        width: 100%;
+        color: #fff;
+        font-size: 1.8rem;
+        text-align: left;
+        border: none;
+        border-radius: 6px;
+        background-color: $color-boat;
+        transition: background-color .3s;
+        cursor: pointer;  
+
+        &:hover,
+        &:focus {
+            background-color: $color-active-boat;
+        }
+    }
+
+    .accordion-info {
+        display: none;
+        padding: 1em 2em 0;
+        font-size: 0.7em;
+
+        .accordion-info-text {
+            margin-bottom: 0.5em;
+        }
+    }
+}
+
+//CHECKBOX
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.4);
+    background: #eee;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+
+    &:checked {
+        background: tomato;
+        
+        // &:after {
+        //     content: "";
+        //     width: 5px;
+        //     height: 5px;
+        //     border-radius: 50%;
+        //     background: #fff;
+        //     position: absolute;
+        //     left: 50%;
+        //     top: 50%;
+        //     transform: translate(-50%, -50%);
+        // }
+    }
+}
+
+
+
