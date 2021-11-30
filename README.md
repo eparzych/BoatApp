@@ -1,12 +1,10 @@
 # BoatApp
 The application is used to manage drone-boats that clean the water reservoir.
 
-General Information
-
+## General Information
 The application is used to manage drone-boats that clean the water reservoir
 
-Technologies Used
-
+## Technologies Used
 - React
 - React Router
 - GRID
@@ -15,12 +13,10 @@ Technologies Used
 - REST API
 - Webpack
 
-Screenshots
+## Screenshots
 
-Setup
-
+## Setup
 - npm start
 
-Contact
-
+## Contact
 emilia.parzych92@gmail.com
