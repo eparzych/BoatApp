@@ -1,5 +1,5 @@
 # BoatApp
-The application is used to manage drone-boats that clean the water reservoir.
+The application is used to manage drone-boats that clean the water reservoir
 
 ## General Information
 The application is used to manage drone-boats that clean the water reservoir
