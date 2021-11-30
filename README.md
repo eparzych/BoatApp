@@ -12,6 +12,7 @@ Technologies Used
 - GRID
 - CSS3
 - SASS
+- REST API
 - Webpack
 
 Screenshots
