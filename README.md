@@ -9,10 +9,10 @@ It allows you to select boats from the list and ask you to swim to a specific ar
 - React 17.0
 - React Router 5.3
 - react-google-maps/api 2.4
-- Babel 7.15
+- Babel
 - GRID
 - CSS3
-- SASS 1.42
+- SASS
 - REST API
 - Webpack 5.55
 
