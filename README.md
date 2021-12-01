@@ -19,7 +19,7 @@ It allows you to select boats from the list and ask you to swim to a specific ar
 ## Screenshots
 
 ## Setup
-- npm install --dev
+- npm install --save-dev
 - npm start
 
 ## Contact
