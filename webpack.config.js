@@ -15,7 +15,7 @@ module.exports = {
     historyApiFallback: true,
     proxy: {
       '/api/**': {
-        target: 'http://boat-server.herokuapp.com',
+        target: 'http://boat-backend.herokuapp.com',
         secure: false,
         changeOrigin: true
       }
