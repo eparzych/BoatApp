@@ -8,6 +8,7 @@ It allows you to select boats from the list and ask you to swim to a specific ar
 ## Technologies Used
 - React 17.0
 - React Router 5.3
+- react-google-maps/api 2.4
 - Babel 7.15
 - GRID
 - CSS3
