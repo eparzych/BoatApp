@@ -12,7 +12,7 @@ It allows you to select boats from the list and ask you to swim to a specific ar
 - GRID
 - CSS3
 - SASS 1.42
-- REST API
+- REST API 3.6
 - Webpack 5.55
 
 ## Screenshots
