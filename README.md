@@ -19,7 +19,6 @@ It allows you to select boats from the list and ask you to swim to a specific ar
 ## Screenshots
 ![Screenshot 1](public/img/screenshot1.png)
 ![Screenshot 2](public/img/screenshot2.png)
-![Screenshot 3](public/img/screenshot3.png)
 ![Screenshot 4](public/img/screenshot4.png)
 ![Screenshot 5](public/img/screenshot5.png)
 ![Screenshot 6](public/img/screenshot6.png)
