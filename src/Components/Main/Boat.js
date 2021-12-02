@@ -12,13 +12,13 @@ export const Boat = (props) => {
 
     return (
         <li className="accordion-box">
-            <div className="checkbox">
-                <input type="checkbox" 
-                    key={boat.id}
-                    onChange={(e) => toggleCheckbox(boat.id)} />
-            </div>
             <div className="accordion-item" onClick={openAccordionItems}>
                 <button className="accordion-btn">
+                    <div className="checkbox">
+                        <input type="checkbox" 
+                            key={boat.id}
+                            onChange={(e) => toggleCheckbox(boat.id)} />
+                    </div>
                     Łódka nr {boat.id} 
                 </button>
                 <div className="accordion-info" style={{display: isActive ? 'block' : 'none'}}>
@@ -29,7 +29,6 @@ export const Boat = (props) => {
                     </ul>
                 </div>
             </div>
-
         </li>
     )
 }

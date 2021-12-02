@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Boat } from "./Boat";
 
-
 export const Boats = (props) => {
     const { boats } = props;
 
@@ -21,7 +20,7 @@ export const Boats = (props) => {
     } 
 
     return (
-        <>
+    <>
         <div className="sidebar__open" onClick={() => setOpen(true)}>
             <i className="fas fa-chevron-left"></i>
         </div>
@@ -43,5 +42,3 @@ export const Boats = (props) => {
     </>
     )
 }
-
-

@@ -3,13 +3,14 @@
     align-items: center;
     margin-bottom: 1.2rem;
 
-    .accordion-item{
+    .accordion-item {
         width: calc(100% - 15px);
         margin-left: 15px;
     }
 
     .accordion-btn {
         padding: 0.8em 1em;
+        margin-left: 10px;
         width: 100%;
         color: #fff;
         font-size: 1.8rem;
@@ -19,6 +20,7 @@
         background-color: $color-boat;
         transition: background-color .3s;
         cursor: pointer;  
+        position: relative;
 
         &:hover,
         &:focus {
@@ -53,22 +55,11 @@ input[type="checkbox"] {
     background: #eee;
     outline: none;
     cursor: pointer;
-    position: relative;
+    position: absolute;
+    left: -28px;
 
     &:checked {
         background: tomato;
-        
-        // &:after {
-        //     content: "";
-        //     width: 5px;
-        //     height: 5px;
-        //     border-radius: 50%;
-        //     background: #fff;
-        //     position: absolute;
-        //     left: 50%;
-        //     top: 50%;
-        //     transform: translate(-50%, -50%);
-        // }
     }
 }
 
