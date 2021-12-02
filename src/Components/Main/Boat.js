@@ -6,8 +6,6 @@ export const Boat = (props) => {
 
     const [ isActive, setActive] = useState(false);
 
-      
-
     function openAccordionItems () {
         setActive(!isActive);
     }
@@ -25,10 +23,9 @@ export const Boat = (props) => {
                 </button>
                 <div className="accordion-info" style={{display: isActive ? 'block' : 'none'}}>
                     <ul className="accordion-info-text">
-                        <li>groundspeed: {boat.groundspeed}</li>
                         <li>latitude: {boat.latitude}</li>
                         <li>longitude: {boat.longitude}</li>
-                        <li>updateTime: {boat.updateTime}</li>
+                        <li>heading: {boat.heading}</li>
                     </ul>
                 </div>
             </div>

@@ -61,9 +61,7 @@ export const Map = (props) => {
                         strokeColor: "#454545",
                         fillColor: randomColor(boat.id), 
                         fillOpacity: 1,
-                        rotation: boat.latitude,
-                        // anchor: new google.maps.Point(50, 50),
-                        // scaledSize: new google.maps.Size(100, 100)
+                        rotation: boat.heading,
                       }}
                         label= {{text: String(boat.id),
                           color: "#DDD",
