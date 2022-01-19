@@ -25,18 +25,7 @@ export const Map = (props) => {
     setMap(null);
   }, []);
 
-  function randomColor(ID) {
-    let boatColor;
-    let randomNumber = Math.random();
-    if (0.3 > randomNumber ) {
-      return boatColor = `#fb${ID}`
-    }
-    if (0.3 <= randomNumber &&  randomNumber < 0.6) {
-      return boatColor = `#95${ID}`
-    } else {
-      return boatColor = `#9a${ID}`
-    }
-  }
+
 
   return isLoaded ? (
     <GoogleMap
@@ -59,7 +48,7 @@ export const Map = (props) => {
                         scale: 0.06,
                         strokeWeight: 4,
                         strokeColor: "#454545",
-                        fillColor: randomColor(boat.id), 
+                        fillColor: "#3D3D3D", 
                         fillOpacity: 1,
                         rotation: boat.heading,
                       }}
