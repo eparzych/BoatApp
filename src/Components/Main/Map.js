@@ -12,7 +12,9 @@ export const Map = (props) => {
     googleMapsApiKey: ""
   });
 
-  const [map, setMap] = useState(null);
+  const [ map, setMap ] = useState(null);
+  const [ target, setTarget ] = useState();
+
   const { boats, activeTool } = props;
 
   const onLoad = useCallback(map => {
@@ -27,7 +29,8 @@ export const Map = (props) => {
 
   const handleClickMap = (e) => {
     if(activeTool == "target"){
-      console.log(e.latLng.lat())
+      setTarget(e.latLng)
+      // console.log(e.latLng)
     }
   }
 
@@ -63,8 +66,10 @@ export const Map = (props) => {
                           fontSize: "2.7rem",
                           fontWeight: "bold",
                       }} />
-                )}
-
+        )}
+        <Marker 
+          position={ target }
+        />
     </GoogleMap>
   ) : null;
 }
