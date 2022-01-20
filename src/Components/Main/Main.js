@@ -19,7 +19,7 @@ export const Main = (props) => {
         <div className="container__user">
             <Nav userName={userName} logout={logout}  />
             <div className="wrapper__user">
-                <Map boats={boats} />
+                <Map boats={boats} activeTool={activeTool} />
                 <Tools activeTool={activeTool} setActiveTool={setActiveTool} />
                 <Boats boats={boats} />
             </div>

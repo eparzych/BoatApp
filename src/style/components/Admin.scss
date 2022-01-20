@@ -3,7 +3,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: $height-nav-desktop 1fr;
   grid-template-areas: 
-    "admin__nav"
+    "nav"
     "admin__content";
   justify-items: stretch;
   width: 100%;

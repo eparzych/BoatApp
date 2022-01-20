@@ -1,7 +1,5 @@
 import React, {useState} from "react";
-import {
-    Link
-  } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const Nav = (props) => {
     const {userName, logout} = props;
@@ -23,6 +21,11 @@ export const Nav = (props) => {
             
                 <ul className={"drop-menu menu-2" + (isOpen ? " list__open" : "")} >
                     <li className="drop-item">
+                        <Link to="/admin">
+                            <p className="item">Administrator</p>
+                        </Link>
+                    </li>
+                    <li className="drop-item">
                         <Link to="/reset" >
                             <p className="item">Zmień hasło</p>
                         </Link>
@@ -35,4 +38,3 @@ export const Nav = (props) => {
         </ul>
     )
 }
-

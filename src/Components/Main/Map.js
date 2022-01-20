@@ -13,7 +13,7 @@ export const Map = (props) => {
   });
 
   const [map, setMap] = useState(null);
-  const { boats } = props;
+  const { boats, activeTool } = props;
 
   const onLoad = useCallback(map => {
     // const bounds = new window.google.maps.LatLngBounds();
@@ -25,7 +25,11 @@ export const Map = (props) => {
     setMap(null);
   }, []);
 
-
+  const handleClickMap = (e) => {
+    if(activeTool == "target"){
+      console.log(e.latLng.lat())
+    }
+  }
 
   return isLoaded ? (
     <GoogleMap
@@ -34,7 +38,9 @@ export const Map = (props) => {
         zoom={10}
         options={{disableDefaultUI: true}}
         onLoad={onLoad}
-        onUnmount={onUnmount}>
+        onUnmount={onUnmount}
+        onClick={handleClickMap}
+        >
         { /* Child components, such as markers, info windows, etc. */ }
 
         {boats.map(boat => 

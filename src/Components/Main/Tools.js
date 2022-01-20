@@ -14,13 +14,9 @@ export const Tools = (props) => {
     return (
     <div className="sidebar">
         <ul className="nav-list">
-            <li id="clean-area" className={isActive("clean-area") ? "activeTool" : ""} onClick={onClick}>
-                <i className='fas fa-draw-polygon'></i>
-                <span className="tooltip">Zaznacz obszar sprzątania</span>
-            </li>
-            <li id="run" className={isActive("run") ? "activeTool" : ""} onClick={onClick}>
+            <li id="target" className={isActive("target") ? "activeTool" : ""} onClick={onClick}>
                 <i className='far fa-paper-plane' ></i>
-                <span className="tooltip">Dopłyń do celu</span>
+                <span className="tooltip">Zaznacz cel płynięcia</span>
             </li>
             <li id="start" className={isActive("start") ? "activeTool" : ""} onClick={onClick}>
                 <i className='far fa-play-circle' ></i>

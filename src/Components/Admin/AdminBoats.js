@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { AdminNav } from "./AdminNav.js";
+import { AdminNav } from "./AdminNav";
 import { AdminTools } from "./AdminTools.js"
 import { AdminBoat } from "./AdminBoat.js";
 

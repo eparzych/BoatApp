@@ -1,5 +1,5 @@
 .nav,
-.admin__nav {
+.nav {
     @include flexEnd;
     grid-area: nav;
     padding: 0 3rem;
@@ -94,6 +94,6 @@
     } 
 }
 
-.admin__nav {
-    grid-area: admin__nav;
+.nav {
+    grid-area: nav;
 }
