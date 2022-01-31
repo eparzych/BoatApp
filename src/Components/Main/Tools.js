@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export const Tools = (props) => {
     const { activeTool, setActiveTool } = props;
@@ -6,6 +6,12 @@ export const Tools = (props) => {
     const onClick = (e) => {
         setActiveTool(e.currentTarget.id);
     }
+
+    useEffect(() => {
+        fetch('/api/' + activeTool, {
+            method: "POST"
+        });
+    }, [activeTool]);
 
     const isActive = (id) => {
         return activeTool == id;
