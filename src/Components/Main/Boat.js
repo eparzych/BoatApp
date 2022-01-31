@@ -26,6 +26,7 @@ export const Boat = (props) => {
                         <li>latitude: {boat.latitude}</li>
                         <li>longitude: {boat.longitude}</li>
                         <li>heading: {boat.heading}</li>
+                        <li>speed: {boat.speed}</li>
                     </ul>
                 </div>
             </div>
