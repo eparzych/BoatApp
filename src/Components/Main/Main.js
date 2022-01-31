@@ -9,11 +9,19 @@ export const Main = (props) => {
     const [boats, setBoats] = useState([]);
     const [activeTool, setActiveTool] = useState("");
     
-    useEffect(() => {
+    const updateBoats = () => {
         fetch('/api/boats')
-        .then(response => response.json())
-        .then(data => setBoats(data));
-        }, []);
+            .then(response => response.json())
+            .then(data => setBoats(data));
+    }
+
+    useEffect(() => {
+        updateBoats();
+        let updateInterval = setInterval(updateBoats, 1000);
+        return () => {
+            clearInterval(updateInterval);
+        };
+    });
 
     return (
         <div className="container__user">
