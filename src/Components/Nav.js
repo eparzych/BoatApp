@@ -19,7 +19,7 @@ export const Nav = (props) => {
                     <span>{userName}</span>
                 </p>
             
-                <ul className={"drop-menu menu-2" + (isOpen ? " list__open" : "")} >
+                <ul className={"drop-menu" + (isOpen ? " list__open" : "")} >
                     <li className="drop-item">
                         <Link to="/admin">
                             <p className="item">Administrator</p>

@@ -1,10 +1,8 @@
-.nav,
 .nav {
     @include flexEnd;
     grid-area: nav;
     padding: 0 3rem;
     background-color: $color-nav2;
-    // background-color: rgba(173, 173, 173, 0.157);
     font-size: 2rem;
     z-index: 3;
 
@@ -20,30 +18,28 @@
                 font-size: 2.5rem;
             }
         }
-        
-        .menu-2 {
-            perspective: 1000px;
             
-            .drop-item {
-                opacity: 0;
-                transform-origin: top center;
-                transition: background-color .5s;
+        .drop-item {
+            opacity: 0;
+            transform-origin: top center;
+            transition: background-color .5s;
 
-                @for $i from 1 through 4 {
-                
-                    &:nth-child(#{$i}) {
-                        animation-name: topToBottom;
-                        animation-duration: 400ms;
-                        animation-delay: (150ms * $i) - 300;
-                        animation-timing-function: ease-in-out;
-                        animation-fill-mode: forwards;
-                    }
+            @for $i from 1 through 4 {
+            
+                &:nth-child(#{$i}) {
+                    animation-name: topToBottom;
+                    animation-duration: 400ms;
+                    animation-delay: (150ms * $i) - 300;
+                    animation-timing-function: ease-in-out;
+                    animation-fill-mode: forwards;
                 }
             }
-            .last {
-                border-radius: 0 0 15px 15px;
-            }   
         }
+
+        .last {
+            border-radius: 0 0 15px 15px;
+        }   
+  
     
         p {
             @include center;
@@ -60,7 +56,6 @@
             display: none;
             .item {
                 height: 70px;
-                // background: rgba(45, 51, 54, 0.95);
                 background-color: $color-nav2;
                 opacity: .95;
                 font-size: .8em;
@@ -80,8 +75,6 @@
         }
     }
 
-
-    
     @keyframes topToBottom {
       0% {
         opacity: 0;
@@ -92,8 +85,4 @@
         transform: rotateX(0deg);
       }
     } 
-}
-
-.nav {
-    grid-area: nav;
 }
