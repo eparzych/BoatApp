@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
 const center = {
@@ -17,6 +17,18 @@ export const Map = (props) => {
 
   const { boats, activeTool } = props;
 
+  useEffect(() => {
+    if (target) {
+      fetch('/api/target', {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({latitude: target.lat(), longitude: target.lng()})
+      });
+    }
+  }, [target]);
+
   const onLoad = useCallback(map => {
     // const bounds = new window.google.maps.LatLngBounds();
     // map.fitBounds(bounds);
@@ -30,7 +42,6 @@ export const Map = (props) => {
   const handleClickMap = (e) => {
     if(activeTool == "target"){
       setTarget(e.latLng)
-      // console.log(e.latLng)
     }
   }
 
