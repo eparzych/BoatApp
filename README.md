@@ -1,6 +1,8 @@
 # BoatApp
 The application is used to manage drone-boats
 
+Works with Node.js/Express.js backend at https://github.com/garaminowicz/boat-backend
+
 ## General Information
 The application is used to manage drone-boats. 
 It allows you to select boats from the list and move to a specific area and return to the bases. There is also an admin profile to manage the boats and the user list.
