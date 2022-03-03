@@ -1,5 +1,5 @@
 # BoatApp
-The application is used to manage drone-boats
+The application is used to manage drone-boats. [_here_](https://eparzych.github.io/BoatApp/)
 
 Works with Node.js/Express.js backend at https://github.com/garaminowicz/boat-backend
 
